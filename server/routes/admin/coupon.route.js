@@ -10,6 +10,6 @@ route.post('/coupon', controller.createCoupon);
 
 route.put('/coupon', controller.updateCoupon);
 
-route.delete('/coupon', controller.deleteCoupon);
+route.delete('/coupon/:id', controller.deleteCoupon);
 
 module.exports = route;

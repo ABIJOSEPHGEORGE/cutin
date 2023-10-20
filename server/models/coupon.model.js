@@ -6,7 +6,7 @@ const Coupon = mongoose.model('Coupon', new mongoose.Schema({
         required: true,
         unique: true
     },
-    percentage: {
+    discount_percentage: {
         type: Number,
         required: true,
     },
@@ -18,7 +18,7 @@ const Coupon = mongoose.model('Coupon', new mongoose.Schema({
         type: Date,
         required: true,
     },
-    minimum_purchase: {
+    min_purchase: {
         type: Number,
         required: true,
     },
