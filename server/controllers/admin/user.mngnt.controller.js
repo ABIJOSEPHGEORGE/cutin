@@ -6,7 +6,7 @@ module.exports = {
         const users = await User.find({role: 'user'});
         return res.status(200).json({ error: false, msg: 'Successfull', users});
     }),
-    statusChange: catchAsync( async (req,res) => {
+    accountStatus: catchAsync( async (req,res) => {
         const userEmail = req.params.email;
         const status = req.query.status;
 
