@@ -20,6 +20,18 @@ const User = mongoose.model('User', new mongoose.Schema({
     mobile: {
         type: Number,
         required: true,
+        unique: true,
     },
+    role: {
+        type: String,
+        default: 'user',
+        enums: ['user', 'merchant'],
+    },
+    status: {
+        type: Boolean,
+        default: true,
+    }
 
-}))
+},{timestamps: true}))
+
+module.exports = User;
